@@ -46,18 +46,16 @@ public class Dreptunghi extends Figura{
     @Override
     public Figura duplicare(Figura f) {
 
-        Dreptunghi dreptunghi=(Dreptunghi) f;
-        return dreptunghi;
+        return new Dreptunghi(this.linie1, this.linie2);
     }
 
     @Override
     public void afisare() {
 
-        System.out.println("Dreptunghiul este format din: \n");
-        System.out.println("Linia 1: ");
-        this.linie1.afisare();
-        System.out.println("\nLinia 2: ");
-        this.linie2.afisare();
+        System.out.print("Dreptunghiul are coordonatele: ");
+        this.getLinie1().afisare();
+        System.out.print(" ");
+        this.getLinie2().afisare();
 
     }
 }

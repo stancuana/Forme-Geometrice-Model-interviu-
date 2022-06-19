@@ -44,15 +44,20 @@ public class Punct extends Figura {
     @Override
     public Figura duplicare(Figura f){
 
-        Punct punct=(Punct) f;
-
-        return punct;
+        return new Punct(this.coordonataX, this.coordonataY);
     }
 
     @Override
     public void afisare(){
 
-        System.out.println("Punctul este format din: \n Coordonata lui x: "+this.coordonataX+"\n Coordonata lui y: "+this.coordonataY);
+
+        System.out.println(this);
+    }
+
+
+    @Override
+    public String toString() {
+        return "("+coordonataX+","+coordonataY+")";
     }
 }
 

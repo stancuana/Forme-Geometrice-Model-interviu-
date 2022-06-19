@@ -1,26 +1,16 @@
 package com.company.model;
 
-public class Eticheta extends Figura{
+public class Eticheta extends Dreptunghi{
 
-
-    private Dreptunghi dreptunghi;
     private String text;
 
 
-    public Eticheta(Dreptunghi dreptunghi, String text){
+    public Eticheta(Linie linie1, Linie linie2,String text){
 
-        this.dreptunghi=dreptunghi;
+        super(linie1,linie2);
         this.text=text;
     }
 
-
-    public Dreptunghi getDreptunghi() {
-        return dreptunghi;
-    }
-
-    public void setDreptunghi(Dreptunghi dreptunghi) {
-        this.dreptunghi = dreptunghi;
-    }
 
     public String getText() {
         return text;
@@ -30,31 +20,18 @@ public class Eticheta extends Figura{
         this.text = text;
     }
 
-
-    @Override
-    public void translatareX(int x) {
-
-        this.dreptunghi.translatareX(x);
-    }
-
-    @Override
-    public void translatareY(int y) {
-
-       this.dreptunghi.translatareY(y);
-    }
-
     @Override
     public Figura duplicare(Figura f) {
-
-        Eticheta eticheta=(Eticheta) f;
-        return eticheta;
+        return new Eticheta(this.getLinie1(),this.getLinie2(),this.text);
     }
 
     @Override
     public void afisare() {
-
-        System.out.println("Eticheta este formata din: \n Dreptunghiul: ");
-        this.dreptunghi.afisare();
-        System.out.println("\nTextul: "+this.getText());
+        System.out.print("\n");
+        System.out.print("\nEticheta are coordonatele: ");
+        super.getLinie1().afisare();
+        super.getLinie2().afisare();
+        System.out.print("si textul: "+this.text+"\n");
+        System.out.print("\n");
     }
 }

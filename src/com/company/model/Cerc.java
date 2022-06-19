@@ -45,17 +45,13 @@ public class Cerc extends Figura {
 
     @Override
     public Figura duplicare(Figura f) {
-
-        Cerc cerc=(Cerc) f;
-        return cerc;
+        return  new Cerc(this.punct,this.raza);
     }
 
     @Override
     public void afisare() {
 
-        System.out.println("Cercul este format din: \n Punctul : ");
-        this.punct.afisare();
-        System.out.println("\nRaza de: "+this.raza);
+        System.out.println("\n.........................................\nCercul este de centru "+this.punct+" si raza "+this.raza+"\n");
 
     }
 }

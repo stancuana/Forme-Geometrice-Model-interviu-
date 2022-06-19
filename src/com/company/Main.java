@@ -134,9 +134,7 @@ public class Main {
 
         Linie linie2=new Linie(punct2,punct3);
 
-        Dreptunghi dreptunghi=new Dreptunghi(linie1,linie2);
-
-        Eticheta eticheta=new Eticheta(dreptunghi,"Model Interviu");
+        Eticheta eticheta=new Eticheta(linie1,linie2,"Model Interviu");
 
         System.out.println("AFISARE");
         eticheta.afisare();

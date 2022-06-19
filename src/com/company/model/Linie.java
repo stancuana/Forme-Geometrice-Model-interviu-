@@ -50,17 +50,12 @@ public class Linie extends Figura {
     @Override
     public Figura duplicare(Figura f) {
 
-        Linie linie=(Linie) f;
-        return linie;
+
+        return new Linie(this.punct1, this.punct2);
     }
 
     @Override
     public void afisare() {
-
-        System.out.println("Linia este formata din: \n Punctul 1: ");
-        this.punct1.afisare();
-        System.out.println("\nPunctul 2: ");
-        this.punct2.afisare();
-
+        System.out.print(this.punct1+","+this.punct2+" ");
     }
 }
